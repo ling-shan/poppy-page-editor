@@ -1,25 +1,30 @@
 import { ComponentConfig } from "@measured/puck";
 
-export interface ComponentDefinition {
+export interface ComponentDefinition extends ComponentConfig {
   name: string
-  component: ComponentConfig,
-  categories?: string[]
 }
 
-export type ComponentDefinitionFactory = () => Omit<ComponentDefinition, 'name'>;
+const componentDefinitions = new Map<string, ComponentDefinition>();
 
-const componentDefinitions = new Map<string, ComponentDefinitionFactory>();
+export function registerComponent(component: ComponentDefinition) {
+  const name = component.name;
+  if (!name) {
+    throw new Error("InvalidComponentName");
+  }
 
-export function registerComponent(name: string, factory: ComponentDefinitionFactory) {
-  componentDefinitions.set(name, factory);
+  componentDefinitions.set(name, component);
 }
 
 export function hasRegisteredComponent(name: string): boolean {
   return componentDefinitions.has(name);
 }
 
-export function getAllRegisteredComponents():ComponentDefinitionFactory[]  {
-  const results: ComponentDefinitionFactory[] = [];
+export function getRegisteredComponent(name: string) {
+  return componentDefinitions.get(name);
+}
+
+export function getAllRegisteredComponents():ComponentDefinition[]  {
+  const results: ComponentDefinition[] = [];
   componentDefinitions.forEach((item) => {
     results.push(item);
   })

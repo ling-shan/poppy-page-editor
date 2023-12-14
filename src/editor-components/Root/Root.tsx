@@ -1,14 +1,11 @@
 import React from 'react'
-import { registerComponent } from 'core';
+import { registerComponent } from '../../core/registerComponent';
 
-registerComponent('root', () => {
-  return {
-    component: {
-      fields: {
-      },
-      render({children}) {
-        return <div>{children}</div>;
-      }
-    }
+registerComponent({
+  name: 'root',
+  render(props) {
+    return (
+      <div>{props.children}</div>
+    )
   }
-})
+});

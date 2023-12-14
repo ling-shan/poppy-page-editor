@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Data, Puck } from "@measured/puck";
-import { getEditorConfig } from '../../core/config';
+import { getConfig } from '../../core/config';
 
 export interface PageEditorProps {
   data?: Data
@@ -17,7 +17,7 @@ const defaultOnPublish = () => {};
 
 export function PageEditor(props: PageEditorProps) {
   const config = useMemo(() => {
-    return getEditorConfig();
+    return getConfig();
   }, []);
 
   return (

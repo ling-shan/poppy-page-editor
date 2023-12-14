@@ -2,16 +2,25 @@ import React from 'react'
 import { registerComponent } from '../../core/registerComponent';
 import { registerCategory } from '../../core/registerCategory';
 
+import { Divider } from 'antd';
+
+
 registerComponent({
-  name: 'HeadingBlock',
-  render() {
+  name: 'Divider',
+  fields: {
+    title: {
+      type: "text",
+    },
+
+  },
+  render(props) {
     return (
-      <h1>Hello, world</h1>
+      <Divider>{props.title}</Divider>
     )
   }
 });
 
 registerCategory({
   name: "typography",
-  components: ["HeadingBlock"],
+  components: ["Divider"],
 })

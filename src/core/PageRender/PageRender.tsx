@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { Data, Render } from "@measured/puck";
 
 import "@measured/puck/puck.css";
-import { getRenderConfig } from '../../core/config';
+import { getConfig } from '../../core/config';
 
 export interface PageRenderProps {
   data?: Data
@@ -15,7 +15,7 @@ const defaultData: Data = {
 
 export function PageRender(props: PageRenderProps) {
   const config = useMemo(() => {
-    return getRenderConfig();
+    return getConfig();
   }, []);
 
   return (

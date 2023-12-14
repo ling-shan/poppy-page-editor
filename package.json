@@ -1,6 +1,6 @@
 {
   "name": "@x-poppy/page-editor",
-  "version": "0.0.1-rc.1",
+  "version": "0.0.1-rc.6",
   "description": "",
   "main": "./dist/main.js",
   "scripts": {
@@ -43,6 +43,7 @@
     "@types/react": "^18.0.28",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "antd": "^5.2.2",
     "babel-loader": "^8.3.0",
     "babel-plugin-named-exports-order": "^0.0.2",
     "copyfiles": "^2.4.1",
@@ -96,5 +97,9 @@
         }
       }
     ]
+  },
+  "exports": {
+    ".": "./dist/main.js",
+    "./render": "./dist/mainRedner.js"
   }
 }
