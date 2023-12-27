@@ -1,6 +1,6 @@
 {
   "name": "@x-poppy/page-editor",
-  "version": "0.0.1-rc.9",
+  "version": "1.0.0-rc.1",
   "description": "",
   "main": "./dist/main.js",
   "scripts": {
@@ -106,6 +106,6 @@
   "exports": {
     ".": "./dist/main.js",
     "./editor": "./dist/mainEditor.js",
-    "./render": "./dist/mainRedner.js"
+    "./render": "./dist/mainRender.js"
   }
 }
