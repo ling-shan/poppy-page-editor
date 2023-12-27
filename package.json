@@ -1,6 +1,6 @@
 {
   "name": "@x-poppy/page-editor",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.4",
   "description": "",
   "main": "./dist/main.js",
   "scripts": {
@@ -79,7 +79,9 @@
   "files": [
     "dist",
     "editor.js",
+    "editor.d.ts",
     "render.js",
+    "render.d.ts",
     "!dist/app-env.d.ts",
     "!dist/**/*.{test,stories}.{js,d.ts}"
   ],

@@ -20,7 +20,7 @@ const defaultOnPublish = () => {};
 
 export function PageEditor(props: PageEditorProps) {
   return (
-    <EditorContextProvider>
+    <EditorContextProvider onPublish={props.onPublish}>
       <Puck
       config={getConfig()}
       data={props.data ?? defaultData}

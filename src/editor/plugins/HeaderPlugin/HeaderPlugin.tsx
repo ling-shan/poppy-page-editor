@@ -36,8 +36,6 @@ function Header() {
   }, [appState.ui.rightSideBarVisible, dispatch])
 
   const onSaveClick = useCallback(() => {
-    // eslint-disable-next-line no-debugger
-    debugger;
     editorContext.onPublish(data);
   }, [data, editorContext])
 
