@@ -36,8 +36,12 @@ function Header() {
   }, [appState.ui.rightSideBarVisible, dispatch])
 
   const onSaveClick = useCallback(() => {
-    editorContext.onPublish(data);
+    editorContext.onSave(data);
   }, [data, editorContext])
+
+  const onCancelClick = useCallback(() => {
+    editorContext.onCancel();
+  }, [editorContext])
 
   return (
     <header className={styles.main}>
@@ -51,6 +55,7 @@ function Header() {
         </div>
         <div className={styles.actions}>
           <Button type="primary" onClick={onSaveClick}>Save</Button>
+          <Button type="default" onClick={onCancelClick}>Cancel</Button>
         </div>
       </div>
     </header>

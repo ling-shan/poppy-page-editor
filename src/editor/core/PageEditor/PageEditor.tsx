@@ -7,7 +7,8 @@ import { EditorContextProvider } from './EditorContext';
 
 export interface PageEditorProps {
   data?: Data
-  onPublish?: (data: Data) => void;
+  onCancel?: () => void
+  onSave?: (data: Data) => void;
 }
 
 const defaultData: Data = {
@@ -20,12 +21,12 @@ const defaultOnPublish = () => {};
 
 export function PageEditor(props: PageEditorProps) {
   return (
-    <EditorContextProvider onPublish={props.onPublish}>
+    <EditorContextProvider onSave={props.onSave} onCancel={props.onCancel}>
       <Puck
-      config={getConfig()}
-      data={props.data ?? defaultData}
-      plugins={getAllRegisteredPlugins()}
-      onPublish={props.onPublish ?? defaultOnPublish} />
+        config={getConfig()}
+        data={props.data ?? defaultData}
+        plugins={getAllRegisteredPlugins()}
+        onPublish={props.onSave ?? defaultOnPublish} />
     </EditorContextProvider>
   )
 }
