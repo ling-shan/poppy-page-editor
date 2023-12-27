@@ -78,6 +78,8 @@
   },
   "files": [
     "dist",
+    "editor.js",
+    "render.js",
     "!dist/app-env.d.ts",
     "!dist/**/*.{test,stories}.{js,d.ts}"
   ],
@@ -103,6 +105,7 @@
   },
   "exports": {
     ".": "./dist/main.js",
+    "./editor": "./dist/mainEditor.js",
     "./render": "./dist/mainRedner.js"
   }
 }
