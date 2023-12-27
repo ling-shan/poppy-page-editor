@@ -1,5 +1,11 @@
 # Poppy Page Editor
 
+## Usage
+
+```sh
+npm install @x-poppy/page-editor
+```
+
 ## Editor
 
 ```jsx
