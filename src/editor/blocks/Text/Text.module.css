@@ -1,0 +1,47 @@
+.main {
+  display: inline-block;
+  width: 100%;
+}
+
+.textSize_xxxxl {
+  font-size: var(--puck-font-size-xxxxl);
+  letter-spacing: 0.08ch;
+  font-weight: 800;
+}
+
+.textSize_xxxl {
+  font-size: var(--puck-font-size-xxxl);
+}
+
+.textSize_xxl {
+  font-size: var(--puck-font-size-xxl);
+}
+
+.textSize_xl {
+  font-size: var(--puck-font-size-xl);
+}
+
+.textSize_l {
+  font-size: var(--puck-font-size-l);
+}
+
+.textSize_m {
+  font-size: var(--puck-font-size-m);
+}
+
+.textSize_s {
+  font-size: var(--puck-font-size-s);
+}
+
+.textSize_xs {
+  font-size: var(--puck-font-size-xs);
+}
+
+
+
+
+
+
+
+
+

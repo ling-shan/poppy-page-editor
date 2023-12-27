@@ -1,0 +1,37 @@
+.main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.gapSize_xxxxl {
+  height: 16rem;
+}
+
+.gapSize_xxxl {
+  height: 10rem;
+}
+
+.gapSize_xxl {
+  height: 8rem;
+}
+
+.gapSize_xl {
+  height: 4rem;
+}
+
+.gapSize_l {
+  height: 2rem;
+}
+
+.gapSize_m {
+  height: 1rem;
+}
+
+.gapSize_s {
+  height: 0.5rem;
+}
+
+.gapSize_xs {
+  height: 0.25rem;
+}

@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  padding: 40px 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logoImg {
+  max-height: 48px;
+}

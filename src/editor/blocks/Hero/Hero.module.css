@@ -1,0 +1,113 @@
+.main {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgb(247, 250, 255) 100%
+  );
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main h1 {
+  margin: 0;
+  line-height: 1.1;
+  font-size: 48px;
+}
+
+@media (min-width: 768px) {
+  .main h1 {
+    font-size: 64px;
+  }
+}
+
+.subtitle {
+  color: var(--puck-color-grey-4);
+  font-size: var(--puck-font-size-m);
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 300;
+}
+
+.hasImageBackground .subtitle {
+  color: var(--puck-color-grey-2);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 48px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    flex-wrap: nowrap;
+  }
+}
+
+.alignCenter .inner {
+  justify-content: center;
+  text-align: center;
+}
+
+.alignCenter .content {
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .hasImageBackground .content {
+    max-width: 50%;
+  }
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.imageOverlay {
+  background-image: linear-gradient(
+    -90deg,
+    rgb(247, 250, 255, 0.7) 0%,
+    rgb(247, 250, 255, 0.7) 80%
+  );
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .alignLeft .imageOverlay {
+    background-image: linear-gradient(
+      -90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgb(247, 250, 255) 70%
+    );
+  }
+}
+

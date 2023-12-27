@@ -11,7 +11,8 @@
     "build": "npm run clean && tsc && npm run copy-files",
     "start": "start-storybook -p 6006 -s public",
     "build:storybook": "build-storybook -s public -o docs",
-    "deploy": "npm run build && npm publish --access public"
+    "deploy": "npm run build && npm publish --access public",
+    "pack": "npm run build && npm pack"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -61,7 +62,9 @@
     "webpack": "^5.76.1"
   },
   "dependencies": {
-    "@measured/puck": "^0.12.0",
+    "@measured/puck": "^0.13.1",
+    "@measured/puck-plugin-heading-analyzer": "^0.13.1",
+    "lucide-react": "^0.302.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.5",
