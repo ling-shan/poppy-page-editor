@@ -1,4 +1,4 @@
-import './blocks';
-import './plugins';
+import './editor/blocks';
+import './editor/plugins';
 
 export * from './editor/core/PageEditor';
