@@ -22,7 +22,6 @@ export const LayoutJustifyOptions = [
   { label: "center", value: "center" },
   { label: "space-between", value: "space-between" },
   { label: "space-around", value: "space-around" },
-  { label: "space-evenly", value: "space-evenly" },
 ] as const;
 
 export const LayoutAlignOptions = [
@@ -80,6 +79,10 @@ registerComponent<LayoutProps>({
   },
   defaultProps: {
     gap: '24px',
+    wrap: 'wrap',
+    direction: 'row',
+    justify: 'center',
+    align: 'center',
     items: [{} as any, {} as any]
   },
   render(props) {
