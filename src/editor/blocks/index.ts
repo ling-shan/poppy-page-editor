@@ -22,6 +22,7 @@ import Banner from './Banner';
 import SiteMap from './SiteMap';
 import Logos from './Logos';
 import Feature from './Feature'
+import Footer from './Footer'
 
 import './Root';
 
@@ -33,7 +34,8 @@ registerCategory({
     Banner.Name,
     Feature.Name,
     Logos.Name,
-    SiteMap.Name
+    SiteMap.Name,
+    Footer.Name
   ],
 })
 

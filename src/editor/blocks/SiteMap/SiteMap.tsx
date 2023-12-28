@@ -53,8 +53,8 @@ registerComponent<SiteMapProps>({
   },
 
   defaultProps: {
-    color: '#000',
-    backgroundColor: '#00000000',
+    color: '#767676',
+    backgroundColor: '#F1F1F1',
     columns: Array(4).fill({
       title: "Section",
       items: Array(4).fill({

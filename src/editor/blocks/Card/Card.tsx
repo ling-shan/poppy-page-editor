@@ -1,10 +1,11 @@
 import React, { useCallback } from 'react'
-import { Avatar, Button, Card, Typography } from 'antd';
+import { Card } from 'antd';
+import Meta from 'antd/es/card/Meta';
 
 import { registerComponent } from '../../core/registerComponent';
 
 import styles from './Card.module.css'
-import Meta from 'antd/es/card/Meta';
+
 
 const Name = 'Card'
 

@@ -1,0 +1,18 @@
+.main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main p {
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 20px;
+}
