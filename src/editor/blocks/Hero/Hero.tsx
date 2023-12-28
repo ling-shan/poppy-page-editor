@@ -90,7 +90,7 @@ registerComponent<HeroProps>({
         <div className={styles.inner}>
           <div className={styles.content}>
             <h1>{title}</h1>
-            <p className={styles.subtitle}>{description}</p>
+            <div className={styles.subtitle} dangerouslySetInnerHTML={{__html: description ?? ''}}></div>
             <div className={styles.actions}>
               {buttons?.map((btnProps, i) => (
                 <Button

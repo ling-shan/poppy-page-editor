@@ -74,8 +74,8 @@ registerComponent<FeatureProps>({
         padding={padding}>
         <div className={classNames(styles.container, align === 'right' && styles.withAlignRight)}>
           <div className={styles.left}>
-            <h2 className={styles.title}>{title}</h2>
-            <p className={styles.subtitle}>{description}</p>
+            <p className={styles.title}>{title}</p>
+            <div className={styles.subtitle} dangerouslySetInnerHTML={{__html: description ?? ''}}></div>
             <div className={styles.actions}>
                 {buttons?.map((btnProps, i) => (
                   <Button
@@ -90,18 +90,9 @@ registerComponent<FeatureProps>({
           </div>
 
           {image?.url && (
-              <div
-                className={styles.right}
-                style={{
-                  backgroundImage: `url('${image.url}')`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  height: 356,
-                  marginLeft: "auto",
-                  width: "100%",
-                }}
-              />
+              <div className={styles.right}>
+                <img className={styles.img} src={image.url} />
+              </div>
             )}
         </div>
       </Section>

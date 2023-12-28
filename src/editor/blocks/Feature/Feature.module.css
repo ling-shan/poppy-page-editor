@@ -1,8 +1,9 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row-reverse;
-  flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -11,11 +12,15 @@
 }
 
 .left {
-  flex: 1;
+  width: fit-content;
+  max-width: 600px;
+  max-height: 400px;
 }
 
 .title {
   font-size: var(--puck-font-size-l);
+  font-weight: 400;
+  margin: 0;
 }
 
 .subtitle {
@@ -28,6 +33,14 @@
 }
 
 .right {
-  flex: 1;
+  width: fit-content;
+  min-width: 200px;
+  max-width: 600px;
+  max-height: 400px;
+}
+
+.img {
+  height: 100%;
+  object-fit: cover;
 }
 

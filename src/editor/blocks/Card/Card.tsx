@@ -24,7 +24,7 @@ registerComponent<CardProps>({
       type: 'text',
     },
     description: {
-      type: 'text'
+      type: 'textarea'
     },
     href: {
       type: 'text'
@@ -59,7 +59,7 @@ registerComponent<CardProps>({
       <Card
         bordered
         className={styles.main}
-        hoverable
+        hoverable={false}
         type="inner"
         data-href-url={href}
         onClick={onCardClick}
@@ -67,7 +67,7 @@ registerComponent<CardProps>({
       >
         <Meta
           title={title}
-          description={description} />
+          description={<div dangerouslySetInnerHTML={{__html: description ?? ''}}></div>} />
       </Card>
     )
   }
