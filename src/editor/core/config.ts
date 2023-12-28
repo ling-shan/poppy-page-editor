@@ -19,15 +19,8 @@ function getComponentsConfig() {
 
 function getRootConfig() {
   const results = getAllRegisteredComponents();
-  const config = results.reduce<Record<string, ComponentDefinition>>((map, def) => {
-    if (def.name !== "root") {
-      return map;
-    }
-
-    map[def.name] = def;
-    return map;
-  }, {});
-  return config;
+  const rootConfig = results.find((item) => item.name === 'root') ?? undefined;
+  return rootConfig;
 }
 
 function getCategoriesConfig() {

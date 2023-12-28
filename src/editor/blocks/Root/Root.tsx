@@ -12,7 +12,11 @@ registerComponent<RootProps>({
   name: 'root',
   render(props) {
     return (
-      <div className={styles.main}>{props.children}</div>
+      <div className={styles.main}>
+        <div className={styles.inner}>
+          {props.children}
+        </div>
+      </div>
     )
   }
 });
