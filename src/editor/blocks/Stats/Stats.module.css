@@ -5,6 +5,12 @@
   justify-content: center;
 }
 
+@media (max-width: 750px) {
+  .main {
+    padding: 2rem;
+  }
+}
+
 .items {
   background-image: linear-gradient(
     120deg,
